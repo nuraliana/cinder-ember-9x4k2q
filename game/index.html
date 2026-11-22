@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinder Pact — a duel of the four embers</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="table">
+  <header id="topbar">
+    <div class="brand">🔥 CINDER PACT</div>
+    <div id="turn-badge">Cinder Pact</div>
+    <div id="score-badge">Damage dealt 0</div>
+  </header>
+
+  <section id="enemy-area" aria-label="Opponent">
+    <div id="enemy-portrait" class="portrait" title="Warden Vex"></div>
+    <div class="side-info">
+      <div class="name-row"><span class="side-name">Warden Vex</span><span id="enemy-intent" class="intent hidden"></span></div>
+      <div class="lifebar"><div id="enemy-life-fill" class="life-fill"></div><span id="enemy-life-text" class="life-text">♥ 30 / 30</span></div>
+      <div id="enemy-block" class="block-badge hidden">🛡 0</div>
+    </div>
+    <div id="enemy-hand" class="mini-hand" title="The Warden's hand"></div>
+  </section>
+
+  <section id="mid-area">
+    <div id="played-zone"></div>
+    <div id="log" aria-live="polite"></div>
+  </section>
+
+  <section id="player-area" aria-label="You">
+    <div class="side-info">
+      <div class="name-row"><span class="side-name">You · the Emberwright</span><span id="energy-text" class="energy-text">Energy 0 / 0</span></div>
+      <div class="lifebar"><div id="player-life-fill" class="life-fill"></div><span id="player-life-text" class="life-text">♥ 30 / 30</span></div>
+      <div id="player-block" class="block-badge hidden">🛡 0</div>
+    </div>
+    <div id="player-portrait" class="portrait" title="You"></div>
+    <div id="energy-row" title="Energy"></div>
+    <div id="player-hand"></div>
+    <button id="end-turn" type="button">End Turn ⏎</button>
+  </section>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="fx-layer"></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
